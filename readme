@@ -54,8 +54,7 @@ VS Code: https://code.visualstudio.com/Download
 # ~~~~~~ Prettier
 # ~~~~~~ link: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
-// ? This may no longer needed as ESLint has Prettier integrated ?
-# Resoning: Auto formatter for typescritp files
+# Resoning: Auto formatter for typescritp files, not needed if you just use the eslint auto format
 
 # ~~~~~~ Better Comments 
 # ~~~~~~ link: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
