@@ -4,9 +4,26 @@
   "description": "main graphql server for group bank project",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "clean": "rimraf built & mkdirp built",
+    "build": "npm run clean & npm run build-dirty",
+    "build-dirty": "tsc",
+    "start": "npm run build & node built/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scriptsComments": {
+    "clean": "Removes all built folder, then re-create built folder, cleans all built artifact in the process",
+    "build": "Build project with clean repository",
+    "build-dirty": "Build project without removing old built artifact",
+    "start": "Build project with clean repository and start the project",
+    "test": "Currently not implemented"
+  },
   "author": "Tony Han",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^11.13.4",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {}
 }
