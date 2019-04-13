@@ -7,7 +7,7 @@
     "clean": "rimraf built & mkdirp built",
     "build": "npm run clean & npm run build-dirty",
     "build-dirty": "tsc",
-    "start": "npm run build & node built/index.js",
+    "start": "npm run build & node built/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "scriptsComments": {
@@ -20,10 +20,17 @@
   "author": "Tony Han",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/express-graphql": "^0.6.2",
+    "@types/graphql": "^14.2.0",
     "@types/node": "^11.13.4",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.3",
     "typescript": "^3.4.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.2.1"
+  }
 }

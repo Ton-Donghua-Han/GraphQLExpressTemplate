@@ -1,0 +1,4 @@
+{
+    "schemaPath": "src/schema/mainSchema.gql",
+    "include": ["schema/**/*.gql"]
+}
