@@ -1,4 +1,5 @@
 ---
+# Use to parser type script files so that JS rules can apply
 parser: "@typescript-eslint/parser"
 extends: 
     - airbnb-base
@@ -6,6 +7,7 @@ extends:
     - plugin:promise/recommended
 parserOptions:
     project: ./tsconfig.json
+    # Required to properly parse import statement
     sourceType: module
 rules:
     "@typescript-eslint/explicit-function-return-type": error
@@ -20,15 +22,16 @@ rules:
         - allowForLoopAfterthoughts: true
     no-console: off
 env:
+    # Defined all global node variables
     node: true
 settings:
+    # Setting for eslint-plugin-import to properly handle ts import
     import/resolver:
         node:
             extensions:
                 - .js
                 - .ts
-                - .tsx
+    # Setting for eslint-plugin-import be able to parse typescript files
     import/parsers:
         "@typescript-eslint/parser": 
             - .ts
-            - .tsx

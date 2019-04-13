@@ -1,0 +1,112 @@
+# This is a template project
+# Author: Tony Han All Right Reserved
+
+# -----------------------------------
+#        Required Installation
+# -----------------------------------
+
+Node & NPM : https://nodejs.org/en/download/
+VS Code: https://code.visualstudio.com/Download
+
+# --------------------------------
+#        Required Plugin
+# --------------------------------
+
+# ~~~~~~ ESLint 
+# ~~~~~~ link: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+
+# Resoning: Performs real time linting error and auto error fixing, keep the code format consistent
+
+# Paste the setting into setting.json for vs code to recognize typescript code and perform autofix on save
+{
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        { "language": "typescript", "autoFix": true },
+        { "language": "typescriptreact", "autoFix": true }
+    ],
+}
+
+# !!! IMPORTANT !!!
+# Make sure vs code auto format on save is turned off otherwise the code will be formatted twice
+
+# use either
+{
+    "editor.formatOnSave": false
+}
+# or remove the setting.
+
+# ~~~~~~ GraphQL 
+# ~~~~~~ link: https://marketplace.visualstudio.com/items?itemName=Prisma.vscode-graphql
+
+# Reasoning: Performs .gql files (GraphQL schema) syntax highlight and releated feature
+
+# --------------------------------
+#        Optional Plugin
+# --------------------------------
+
+# ~~~~~~ vscode-icons
+# ~~~~~~ link: https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons
+
+# Resoning: Let's be honest, the default set of icons for all file sucks, we need better different icons for our files
+
+# ~~~~~~ Prettier
+# ~~~~~~ link: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
+// ? This may no longer needed as ESLint has Prettier integrated ?
+# Resoning: Auto formatter for typescritp files
+
+# ~~~~~~ Better Comments 
+# ~~~~~~ link: https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
+
+# Resoning: Highlight different type of comment used in this project
+
+# ~~~~~~ GitLens
+# ~~~~~~ link: https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+
+# Resoning: Perform Git Blame to find changes relates to specific commit
+
+# ----------------------------------------------------
+#        Provided Feature of this project
+# ----------------------------------------------------
+
+# 1. Git Repository
+    setting: .gitignore - list of file ignored by git
+
+# 2. NPM support
+    setting:
+        package.json - list of npm script to run and package dependencies
+        package-lock.json - lock file for npm packages, read on npm for more detail
+
+# 3. Typescript support - 
+    setting: tsconfig.json - configure input, output dir, target module and linting rules
+    package: typescript
+
+# 4. GraphQL server
+    plugin: GraphQL
+        plugin setting: .graphqlconfig - required, not sure why
+    package: 
+        Express - http server run in javascript
+        express-graphql - links express with graphql api
+        graphql - graphql library support
+
+# 5. ESLint
+    setting: .eslintrc.yaml - read the setting for more detail
+    plugin: ESLint
+    package:
+        eslint
+        eslint-config-airbnb-base - Set of rules recommonded by airbnb, from base rules and import rules
+        eslint-plugin-import - Import releated linting rules
+        eslint-plugin-promise - Promise related linting rules
+        @typescript-eslint/eslint-plugin - Type script related linting rules
+        @typescript-eslint/parser -- Help parse typescript files
+
+# 6. Local dev server debug (VS Code Only)
+    setting: .vscode/launch.json
+    dependency: 
+        Typescript - files needs to be built to put into right directory
+        GraohQL Server - Server need to be able to run properly using npm
+
+
+

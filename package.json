@@ -4,14 +4,17 @@
   "description": "main graphql server for group bank project",
   "main": "index.js",
   "scripts": {
+    "tsc": "tsc",
+    "eslint": "eslint src/**/*.ts",
     "clean": "rimraf built & mkdirp built",
     "build": "npm run clean & npm run build-dirty",
-    "build-dirty": "npm run eslint & tsc",
-    "eslint": "eslint src/**/*.ts",
+    "build-dirty": "npm run eslint & npm run tsc",
     "start": "npm run build & node built/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "scriptsComments": {
+    "tsc": "Compile typescript into javascript",
+    "eslint": "lint source code to find linting errors",
     "clean": "Removes all built folder, then re-create built folder, cleans all built artifact in the process",
     "build": "Build project with clean repository",
     "build-dirty": "Build project without removing old built artifact",
