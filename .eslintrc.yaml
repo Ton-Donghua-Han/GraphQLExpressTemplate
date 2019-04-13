@@ -1,3 +1,8 @@
+# ----------IMPORTANT, Read before change ------------------
+# Make sure to run npm run eslint after changing this file
+# ESlint plugin will not provide any visual warnings if the
+# settings are wrong, please manually verify the change
+# ----------------------------------------------------------
 ---
 # Use to parser type script files so that JS rules can apply
 parser: "@typescript-eslint/parser"
@@ -5,6 +10,9 @@ extends:
     - airbnb-base
     - plugin:@typescript-eslint/recommended
     - plugin:promise/recommended
+    - plugin:prettier/recommended
+    # Disables typescript related rules that conflict with prettier
+    - prettier/@typescript-eslint
 parserOptions:
     project: ./tsconfig.json
     # Required to properly parse import statement
@@ -21,8 +29,6 @@ rules:
         - error
         - allowForLoopAfterthoughts: true
     no-console: off
-    # max line length is handled by prettier
-    max-len: off
 env:
     # Defined all global node variables
     node: true

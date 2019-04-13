@@ -79,13 +79,14 @@ VS Code: https://code.visualstudio.com/Download
         package.json - list of npm script to run and package dependencies
         package-lock.json - lock file for npm packages, read on npm for more detail
 
-# 3. Typescript support - 
+# 3. Typescript support
     setting: tsconfig.json - configure input, output dir, target module and linting rules
     package: typescript
 
 # 4. GraphQL server
-    plugin: GraphQL
-        plugin setting: .graphqlconfig - required, not sure why
+    plugin: 
+        GraphQL
+            plugin setting: .graphqlconfig - required, not sure why
     package: 
         Express - http server run in javascript
         express-graphql - links express with graphql api
@@ -99,6 +100,10 @@ VS Code: https://code.visualstudio.com/Download
         eslint-config-airbnb-base - Set of rules recommonded by airbnb, from base rules and import rules
         eslint-plugin-import - Import releated linting rules
         eslint-plugin-promise - Promise related linting rules
+        eslint-plugin-prettier - Runs prettier as tslint rules
+        prettier - Actual Prettier package
+            setting: .prettierrc.js
+        eslint-config-prettier - default prettier setting, disabling conflicting rules with other recommonded settings
         @typescript-eslint/eslint-plugin - Type script related linting rules
         @typescript-eslint/parser -- Help parse typescript files
 
