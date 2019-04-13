@@ -3,9 +3,7 @@ interface RootResolver {
 }
 
 const rootResolver: RootResolver = {
-    hello: () => {
-        return "This is hello example";
-    }
-}
+    hello: (): string => "This is hello example",
+};
 
 export default rootResolver;
