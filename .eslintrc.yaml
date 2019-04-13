@@ -1,7 +1,7 @@
 ---
 # Use to parser type script files so that JS rules can apply
 parser: "@typescript-eslint/parser"
-extends: 
+extends:
     - airbnb-base
     - plugin:@typescript-eslint/recommended
     - plugin:promise/recommended
@@ -21,6 +21,8 @@ rules:
         - error
         - allowForLoopAfterthoughts: true
     no-console: off
+    # max line length is handled by prettier
+    max-len: off
 env:
     # Defined all global node variables
     node: true
@@ -33,5 +35,5 @@ settings:
                 - .ts
     # Setting for eslint-plugin-import be able to parse typescript files
     import/parsers:
-        "@typescript-eslint/parser": 
+        "@typescript-eslint/parser":
             - .ts
