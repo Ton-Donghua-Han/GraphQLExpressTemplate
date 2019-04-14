@@ -1,9 +1,11 @@
 interface RootResolver {
-    hello(): string;
+    testCovered(): string;
+    testNotCovered(): string;
 }
 
 const rootResolver: RootResolver = {
-    hello: (): string => "This is hello example",
+    testCovered: (): string => "This line is covered by test",
+    testNotCovered: (): string => "This line is not covered by test",
 };
 
 export default rootResolver;

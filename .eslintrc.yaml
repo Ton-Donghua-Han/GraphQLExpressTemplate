@@ -32,6 +32,7 @@ rules:
 env:
     # Defined all global node variables
     node: true
+    jest: true
 settings:
     # Setting for eslint-plugin-import to properly handle ts import
     import/resolver:
