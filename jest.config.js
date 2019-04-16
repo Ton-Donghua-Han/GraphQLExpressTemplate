@@ -58,7 +58,7 @@ module.exports = {
     },
 
     // A preset that is used as a base for Jest's configuration
-    // preset: null,
+    preset: "ts-jest",
 
     // Use this configuration option to add custom reporters to Jest
     // reporters: undefined,
@@ -96,7 +96,7 @@ module.exports = {
     // ],
 
     // The regexp pattern or array of patterns that Jest uses to detect test files
-    testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    // testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
 
     // This option allows use of a custom test runner
     // testRunner: "jasmine2",
@@ -105,7 +105,7 @@ module.exports = {
     // timers: "real",
 
     // A map from regular expressions to paths to transformers
-    transform: { "^.+\\.tsx?$": "ts-jest" },
+    // transform: { "^.+\\.tsx?$": "ts-jest" },
 
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [
