@@ -9,7 +9,11 @@
         "noUnusedParameters": true,
         "outDir": "./built",
         "preserveConstEnums": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "baseUrl": "src",
+        "paths": {
+            "@public/*": ["public/*"]
+        }
     },
     "include": ["src/**/*"]
 }

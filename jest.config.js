@@ -52,6 +52,11 @@ module.exports = {
     //   "node"
     // ],
 
+    // Makes public path from imports
+    moduleNameMapper: {
+        "@public/(.*)$": "<rootDir>/src/public/$1",
+    },
+
     // A preset that is used as a base for Jest's configuration
     // preset: null,
 

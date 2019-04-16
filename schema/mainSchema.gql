@@ -1,4 +1,5 @@
 type Query {
     testCovered: String
     testNotCovered: String
+    publicImport: String
 }

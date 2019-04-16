@@ -166,6 +166,7 @@ This section contains all related dev-ops tools as well as it's related setting 
         - eslint
         - eslint-config-airbnb-base         # Airbnb recommonded javascript rules
         - eslint-plugin-import              # Recommonded Import Linting rules, confired by Airbnb-base
+        - eslint-import-resolver-typescript # Connect .tsconfig setting with eslint setting for plugin-import, share module import rules
         - eslint-plugin-promise             # Recommonded Promise linting rules
         - eslint-plugin-prettier            # Runs prettier as tslint rules
         - prettier                          # Actual Prettier package
