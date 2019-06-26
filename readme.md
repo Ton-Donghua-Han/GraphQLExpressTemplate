@@ -25,8 +25,8 @@ You will need to install [Node & NPM][Node Download] and [VS Code][VS Code Downl
 - ESLint - Auto fixing and real time error highlight with rules in javascript, import, promise, prettier and typescript
 - GraphQL - Schema highlight
 - GraphiQL - GraphQL api web server
-- VS Code Debug Tool - Server and Unit Test
-- Jest - Automatic Test Run, Failure Highlight, Individual Test Run, File Coverage Highlight
+- VS Code Debug - Unit test debug, Debug lunch dev-server
+- Jest - Automatic Test Run, Failure Highlight, Individual Test Run
 - Markdown - Readme file, syntax highlight and validation
 - Git and npm package
 
