@@ -1,6 +1,5 @@
 type Query {
     testCovered: String
     testNotCovered: String
-    publicImport: String
-    testMock: string
+    testMock: String
 }

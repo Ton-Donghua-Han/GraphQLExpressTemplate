@@ -29,10 +29,6 @@ rules:
         - error
         - allowForLoopAfterthoughts: true
     no-console: off
-    # This validation reports error on module defined using short cuts
-    # like @public/, will enable this if we find a way to mark these 
-    # path as valid dependencies
-    import/no-extraneous-dependencies: off
 env:
     # Defined all global node variables
     node: true
